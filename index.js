@@ -6,10 +6,9 @@ const querystring = require('querystring');
 const app = express();
 const port = 3000;
 
-// Middleware to parse JSON bodies
+
 app.use(bodyParser.json());
 
-// POST endpoint for translation
 app.post('/translate', async (req, res) => {
   try {
     const { text } = req.body;
@@ -42,7 +41,7 @@ app.post('/translate', async (req, res) => {
   }
 });
 
-// Start the server
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
